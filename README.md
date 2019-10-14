@@ -3,11 +3,23 @@ Repository containg a Dockerfile: PostgreSQL with columnstore cstore extension f
 
 A columnar store is used for analytical queries. CStore_fdw is a columnar extension for PostgreSQL. The repository contains a Dockerfile to build a PostgreSQL containing the extension. 
 
-Columnar table example
+## How to run the container
 
- 
+First pull and run the container from a command line
+```
+docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -v /data/postgres:/var/lib/postgresql/data --name columnarpostgresql abuckenhofer/columnarpostgresql
+```
+Next, execute an interactive bash shell in the container
+```
+docker exec -it columnarpostgresql bash
+```
+Finally, start PostgreSQL command line
+```
+pgsql -U postgres
+```
 
-## A simple test using the extension.
+## How to create a columnar table
+
 The following code creates a columnar test table.
 ```
 -- Load extension
