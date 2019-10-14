@@ -8,7 +8,7 @@ LABEL org.label-schema.name="ColumnarPostgreSQL"
 LABEL org.label-schema.description="PostgreSQL with columnstore cstore extension for analytical workloads"
 LABEL org.label-schema.url="https://github.com/citusdata/cstore_fdw"
 LABEL org.label-schema.vcs-url = "https://github.com/abuckenhofer/columnarpostgresql"
-LABEL org.label-schema.docker.cmd="docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres --name columnarpostgresql abuckenhofer/columnarpostgresql"
+LABEL org.label-schema.docker.cmd="docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -v /data/postgres:/var/lib/postgresql/data --name columnarpostgresql abuckenhofer/columnarpostgresql"
 
 RUN apt-get update -y -qq && \
     apt-get -y -qq install protobuf-c-compiler libprotobuf-c0-dev unzip git build-essential
