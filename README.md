@@ -1,11 +1,10 @@
 # columnarpostgresql
-Docker container for running PostgreSQL with columnstore CStore extension.
+Dockerfile for building and running PostgreSQL with columnstore CStore extension.
 
-A columnar store is used for analytical queries. Such stores organize data physically in columns instead of rows. CStore_fdw (see https://github.com/citusdata/cstore_fdw) is a columnar extension for PostgreSQL. The repository contains a Dockerfile for building and running PostgreSQL including CStore_fdw. 
+A columnar store can be used for analytical queries. Such stores organize data physically in columns instead of rows. CStore_fdw (see https://github.com/citusdata/cstore_fdw) is a columnar extension for PostgreSQL.
 
 ## How to run the container
-
-First pull and run the container from a command line. The directory /var/lib/postgresql/data contains the data and the PostgreSQL config files.
+First pull and run the container from a command line. The directory /var/lib/postgresql/data contains the data and the PostgreSQL config files. Port 5432 is exposed and a password for the postgres database user can be set.
 ```
 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=setpassword -v /data/postgres:/var/lib/postgresql/data --name columnarpostgresql abuckenhofer/columnarpostgresql:latest
 ```
@@ -19,7 +18,6 @@ psql -U postgres
 ```
 
 ## How to create a columnar table
-
 The following code creates a columnar test table.
 ```
 -- Load extension
