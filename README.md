@@ -39,3 +39,11 @@ CREATE FOREIGN TABLE sales_fact
 SERVER cstore_server
 OPTIONS(compression 'pglz');
 ```
+
+## Changeset
+
+V 1.1
+* supports PostgreSQL 12.4
+V 1.0 
+* Initial version with cstore_fdw integration
+* supports PostgreSQL 11.5
