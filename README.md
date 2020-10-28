@@ -42,6 +42,10 @@ OPTIONS(compression 'pglz');
 
 ## Changeset
 
+V 1.2
+* sample files added
+* Bugfix: postgresql-server-dev-12 instead of postgresql-server-dev-all
+
 V 1.1
 * supports PostgreSQL 12.4
 
