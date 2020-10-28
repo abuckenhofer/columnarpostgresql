@@ -32,3 +32,5 @@ RUN git clone https://github.com/citusdata/cstore_fdw.git && \
 RUN sed -i "s/#shared_preload_libraries = ''/shared_preload_libraries = 'cstore_fdw'/g" /usr/share/postgresql/postgresql.conf.sample
 
 WORKDIR /usr/src/postgres
+
+USER postgres
