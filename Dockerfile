@@ -1,5 +1,4 @@
-FROM postgres:11
-#FROM postgres:12.4
+FROM postgres:12.4
 
 LABEL maintainer="Andreas.Buckenhofer@gmail.com"
 LABEL org.label-schema.schema-version="1.1"
@@ -24,6 +23,7 @@ RUN apt-get update \
 WORKDIR /usr/src
 RUN git clone https://github.com/citusdata/cstore_fdw.git && \
     cd cstore_fdw && \
+    export MAJORVERSION=12 && \
     make -j"$(nproc)" && \
     make install && \
     cd .. && \
