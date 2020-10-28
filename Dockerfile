@@ -1,4 +1,5 @@
-FROM postgres:12.4
+FROM postgres:12
+#FROM postgres:12.4
 
 LABEL maintainer="Andreas.Buckenhofer@gmail.com"
 LABEL org.label-schema.schema-version="1.1"
