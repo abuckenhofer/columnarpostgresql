@@ -23,8 +23,7 @@ RUN apt-get update \
 WORKDIR /usr/src
 RUN git clone https://github.com/citusdata/cstore_fdw.git && \
     cd cstore_fdw && \
-    export MAJORVERSION="12" && \
-    make -j"$(nproc)" && \
+    make MAJORVERSION=12 -j"$(nproc)" && \
     make install && \
     cd .. && \
     rm -rf cstore_fdw
