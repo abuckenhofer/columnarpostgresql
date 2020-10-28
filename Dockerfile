@@ -32,4 +32,3 @@ RUN sed -i "s/#shared_preload_libraries = ''/shared_preload_libraries = 'cstore_
 
 WORKDIR /usr/src/postgres
 
-USER postgres
