@@ -1,7 +1,7 @@
 FROM postgres:12.4
 
 LABEL maintainer="Andreas.Buckenhofer@gmail.com"
-LABEL org.label-schema.schema-version="1.1"
+LABEL org.label-schema.schema-version="1.2"
 LABEL org.label-schema.name="ColumnarPostgreSQL"
 LABEL org.label-schema.description="PostgreSQL with columnstore cstore extension for analytical workloads"
 LABEL org.label-schema.url="https://github.com/citusdata/cstore_fdw"
