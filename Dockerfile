@@ -15,7 +15,7 @@ RUN apt-get update -y -qq && \
 ## required for building and installing extensions
 RUN apt-get update \
     && apt-get install -y \
-        postgresql-server-dev-all-12 \
+        postgresql-server-dev-12 \
         postgresql-common \
     && rm -rf /var/lib/apt/lists/*
 
@@ -32,3 +32,4 @@ RUN sed -i "s/#shared_preload_libraries = ''/shared_preload_libraries = 'cstore_
 
 WORKDIR /usr/src/postgres
 
+USER postgres
