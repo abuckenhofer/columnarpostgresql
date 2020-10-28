@@ -30,6 +30,8 @@ RUN git clone https://github.com/citusdata/cstore_fdw.git && \
 ## add cstore_fdw to PostgreSQL config
 RUN sed -i "s/#shared_preload_libraries = ''/shared_preload_libraries = 'cstore_fdw'/g" /usr/share/postgresql/postgresql.conf.sample
 
-WORKDIR /usr/src/postgres
+## add sample files into container
+RUN git clone https://github.com/abuckenhofer/dwh_course.git
+WORKDIR /usr/src/dwh_course
 
 USER postgres
