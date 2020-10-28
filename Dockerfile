@@ -15,7 +15,7 @@ RUN apt-get update -y -qq && \
 ## required for building and installing extensions
 RUN apt-get update \
     && apt-get install -y \
-        postgresql-server-dev-all \
+        postgresql-server-dev-all-12 \
         postgresql-common \
     && rm -rf /var/lib/apt/lists/*
 
