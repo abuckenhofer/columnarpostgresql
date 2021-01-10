@@ -40,6 +40,8 @@ SERVER cstore_server
 OPTIONS(compression 'pglz');
 ```
 
+For more information see my blog post: https://www.buckenhofer.com/2021/01/postgresql-columnar-extension-cstore_fdw/
+
 ## Changeset
 
 V 1.2
