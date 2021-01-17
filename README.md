@@ -8,7 +8,7 @@ For additional information see also my article: ["PostgreSQL columnar extension 
 ## How to run the container
 First pull and run the container from a command line. The directory /var/lib/postgresql/data contains the data and the PostgreSQL config files. Port 5432 is exposed and a password for the postgres database user can be set.
 ```
-docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=setpassword -v /data/postgres:/var/lib/postgresql/data --name columnarpostgresql abuckenhofer/columnarpostgresql:latest
+docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=setpassword --name columnarpostgresql abuckenhofer/columnarpostgresql:latest
 ```
 Next, execute an interactive bash shell in the container
 ```
@@ -44,6 +44,9 @@ OPTIONS(compression 'pglz');
 
 
 ## Changeset
+
+V 1.3
+* sample data: covid data added and spotify data refreshed
 
 V 1.2
 * sample files added
