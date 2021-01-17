@@ -1,12 +1,12 @@
 FROM postgres:12.4
 
 LABEL maintainer="Andreas.Buckenhofer@gmail.com"
-LABEL org.label-schema.schema-version="1.2"
+LABEL org.label-schema.schema-version="1.3"
 LABEL org.label-schema.name="ColumnarPostgreSQL"
 LABEL org.label-schema.description="PostgreSQL with columnstore cstore extension for analytical workloads"
 LABEL org.label-schema.url="https://github.com/citusdata/cstore_fdw"
 LABEL org.label-schema.vcs-url = "https://github.com/abuckenhofer/columnarpostgresql"
-LABEL org.label-schema.docker.cmd="docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=setpassword -v /data/postgres:/var/lib/postgresql/data --name columnarpostgresql abuckenhofer/columnarpostgresql:latest"
+LABEL org.label-schema.docker.cmd="docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=setpassword --name columnarpostgresql abuckenhofer/columnarpostgresql:latest"
 
 ## required for cstore_fdw
 RUN apt-get update -y -qq && \
